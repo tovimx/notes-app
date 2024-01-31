@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { NotesList } from "./NotesList";
 import { NoteForm } from "./NoteForm";
 
