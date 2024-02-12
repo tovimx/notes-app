@@ -1,4 +1,3 @@
-# Paste your workflow YAML to this code edit
 name: CI/notes-app
 
 on:
