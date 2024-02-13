@@ -47,10 +47,7 @@ export const NotesList = (props) => {
                                     inputProps={{ "aria-labelledby": labelId }}
                                 />
                             </ListItemIcon>
-                            <ListItemText
-                                id={labelId}
-                                primary={`Line item ${index + 1}`}
-                            />
+                            <ListItemText id={labelId} primary={title} />
                         </ListItemButton>
                     </ListItem>
                 );
