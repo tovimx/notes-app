@@ -40,3 +40,13 @@
 .read-the-docs {
     color: #888;
 }
+
+.actions {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+}
+
+.d-flex {
+    display: flex;
+}

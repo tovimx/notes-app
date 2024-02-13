@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { NotesList } from "./NotesList";
 import { NoteForm } from "./NoteForm";
-import { Box, Container, Button } from "@mui/material";
+import { Box, Container, Button, Grid } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -61,17 +61,13 @@ export const App = (props) => {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="sm">
-                <Box>
-                    <div className="col-md-12">
-                        <h1>React notes</h1>
-                    </div>
-                </Box>
-                <Box>
-                    <div className="col-md-4">
+            <Container maxWidth="md">
+                <h1>Notes</h1>
+                <Grid container spacing={2} direction="row">
+                    <Grid xs={5}>
                         <NotesList notes={notes} onSelect={onSelect} />
-                    </div>
-                    <div className="col-md-8">
+                    </Grid>
+                    <Grid xs={7}>
                         <NoteForm
                             note={selected}
                             key={Date.now()}
@@ -79,17 +75,18 @@ export const App = (props) => {
                             onCancel={onCancel}
                         />
 
-                        <div>
+                        <div className="d-flex">
                             <Button
                                 variant="contained"
                                 disableElevation
                                 endIcon={<SendIcon />}
+                                size="small"
                             >
                                 New Note
                             </Button>
                         </div>
-                    </div>
-                </Box>
+                    </Grid>
+                </Grid>
             </Container>
         </React.Fragment>
     );
